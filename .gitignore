@@ -362,6 +362,10 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+
+# Ignore Github and Visual Studio Code files
 .github/
 .gitignore
 .gitattributes
+GuildRevenueAgentRevamp.wowsln
+.git/
