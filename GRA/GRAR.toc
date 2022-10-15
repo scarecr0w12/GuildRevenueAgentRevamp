@@ -1,0 +1,8 @@
+## Interface: 30400
+## Title: GRA Revamp
+## Notes: Guild Revenue Agent Revamp.
+## SavedVariablesPerCharacter: GRATaxDue, GRATaxToDate, GRATaxPercentage, GRAQuietMode, GRATaxPrompt
+## Version: 0.0.1
+## Author: Scarecr0w12
+GRA.lua
+GRAR.xml
