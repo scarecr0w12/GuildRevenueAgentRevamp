@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # WowAddOnStudio Solution File, Format Version 11.00
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E6E1D386-69D8-4755-9E61-0950293915FC}") = "GRAR", "GRA\GRAR.wowproj", "{8D9461BD-1783-4020-B923-CF0F686B993D}"
+Project("{E6E1D386-69D8-4755-9E61-0950293915FC}") = "GRAR", "GRAR.wowproj", "{8D9461BD-1783-4020-B923-CF0F686B993D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
