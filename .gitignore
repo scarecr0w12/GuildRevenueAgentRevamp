@@ -370,3 +370,4 @@ FodyWeavers.xsd
 GuildRevenueAgentRevamp.wowsln
 .git/
 GRAR.wowproj
+.release/
