@@ -156,7 +156,7 @@ end
 
 local function GRA_UpdateTaxAfterQuestOrLoot(chatmsg)
 	-- parse the message
-	local gold = tonumber(chatmsg:match("(%d+)%s" .. GRAGoldSbtr)) or 0
+	local gold = tonumber(chatmsg:match("(%d+)%s" .. GRAGoldStr)) or 0
 	local silver = tonumber(chatmsg:match("(%d+)%s" .. GRASilverStr)) or 0
 	local copper = tonumber(chatmsg:match("(%d+)%s" .. GRACopperStr)) or 0
 	local newMoney = gold * COPPER_PER_GOLD + silver * COPPER_PER_SILVER + copper
