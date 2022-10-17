@@ -196,6 +196,11 @@ local function GRA_UpdateTaxRate()
 			newRate = newRateText:lower():match("tax%s*[:=]?%s*(%d+)%%")
 		end
 	end
+	if guildInfoText:match("tax%s*[:=]?%s*%d+%%!") == nil then
+		GRASpamGuildChannel = 1
+	else
+		GRASpamGuildChannel = 0
+	end
 	if newRate == nil then
 		newRate = 10
 	else
@@ -264,6 +269,7 @@ end
 
 function GRA_DepositMoney()
 	-- recalculate the payable amount, just in case
+	local toPay = 0;
 	if GetMoney() > GRATaxDue then
 		toPay = GRATaxDue
 	else
@@ -272,7 +278,11 @@ function GRA_DepositMoney()
 	if toPay > 0 then
 		-- calculate how much money we need to have after depositing
 		DepositGuildBankMoney(toPay)
-		SendChatMessage("Guild Tax deposited: "..GetCoinText(toPay), "GUILD")
+		if GRASpamGuildChannel == 1 then
+			SendChatMessage("Guild Tax deposited: "..GetCoinText(toPay), "GUILD")
+		else
+			print("|cFF8040FFGRA|r: Guild Tax deposited: "..GetCoinText(toPay))
+		end
 		GRATaxDue = GRATaxDue - toPay
 		GRATaxToDate = GRATaxToDate + toPay
 	end 
@@ -324,7 +334,7 @@ function GRA_OnEvent(self, event, ...)
 		GRA_UpdateTaxAfterTransaction()
 	elseif event == "CHAT_MSG_MONEY" or event == "CHAT_MSG_SYSTEM" then
 		GRA_UpdateTaxAfterQuestOrLoot(arg1)
-	elseif event == "GUILDBANKBAGSLOTS_CHANGED" then
+	elseif event == "GUILDBANKFRAME_OPENED" then
 		GRA_PayTax()
 	end
 end

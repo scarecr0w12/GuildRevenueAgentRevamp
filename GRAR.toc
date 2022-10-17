@@ -2,10 +2,10 @@
 ## Title: GRA Revamp
 ## Notes: Guild Revenue Agent Revamp.
 ## SavedVariablesPerCharacter: GRATaxDue, GRATaxToDate, GRATaxPercentage, GRAQuietMode, GRATaxPrompt
-## Version: 0.0.1
+## Version: 0.0.3
 ## Author: Scarecr0w12
 ## X-Curse-Project-ID: 688876
 
 
-GRA.lua
+GRAR.lua
 GRAR.xml
